@@ -1,0 +1,12 @@
+.error{
+    margin-top: 5px;
+    color: red;
+    font-size: 10px;
+    line-height: 12px;
+}
+.required::after {
+    content: " *";
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+}

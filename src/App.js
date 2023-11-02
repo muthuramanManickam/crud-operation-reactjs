@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Form } from 'react-router-dom';
+import  Create from "./crud/create";
+import  MyFormbuild from "./crud/from";
+import Signin from "./crud/signin";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+    <Router>
+    <Routes>
+      <Route path="/create" element={<Create/>} />
+      <Route path="/about" element={<MyFormbuild />} />
+      <Route path='/' element={<Signin></Signin>}></Route>
+    </Routes>
+  </Router>
+  )
+  }
+export default App; 
